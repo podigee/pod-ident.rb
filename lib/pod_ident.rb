@@ -18,6 +18,7 @@ module PodIdent
     end
 
     def detect
+      return nil if user_agent_string.blank?
       self.result = DetectionResult.new(find_rule, user_agent_string)
       identify_platform if result.positive?
 
@@ -28,6 +29,7 @@ module PodIdent
 
     def find_rule
       RULES.detect do |rule|
+        rule.stringify_keys!
         found = false
 
         match = rule['match']
