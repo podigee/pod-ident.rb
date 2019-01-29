@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'pod_ident/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'pod-ident'
+  spec.name = 'pod_ident'
   spec.version = PodIdent::VERSION
   spec.authors = ['Benjamin Zimmer']
   spec.email = ['ben@podigee.com']
