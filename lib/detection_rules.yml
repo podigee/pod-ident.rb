@@ -805,7 +805,7 @@
       - userAgent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Mobile/14C92 [Pinterest/iOS]
         platform: iPhone
 
-- app: Windows Media Player'
+- app: Windows Media Player
   match:
     startsWith: 
       - NSPlayer
