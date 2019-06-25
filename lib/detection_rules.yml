@@ -926,3 +926,27 @@
         platform: iPad
       - userAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:49.0) Gecko/20100101 Firefox/49.0 (FlipboardProxy/1.2; +http://flipboard.com/browserproxy)
         platform: Mac
+
+- app: iVoox
+  match:
+    startsWith:
+      - ivoox
+      - iVoox
+  platform:
+    regexes:
+      - '(Android)'
+      - '(Darwin)\/'
+      - '\((iPhone|iPad|iPod touch|Macintosh)'
+    replacements:
+      - name: Darwin
+        replaceWith: Apple device
+      - name: Macintosh
+        replaceWith: Mac
+  test:
+    userAgents:
+      - userAgent: iVooxApp/3.23_29 (iPhone; iOS; iOS 12.1.4; ; B106)
+        platform: iPhone
+      - userAgent: iVooxApp/3.23_29 (iPad; iOS; iOS 12.2; ; 44CE)
+        platform: iPad
+      - userAgent: ivooxNew/1 CFNetwork/975.0.3 Darwin/18.2.0
+        platform: Apple device
