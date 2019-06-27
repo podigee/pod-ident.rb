@@ -10,7 +10,7 @@ module PodIdent
       return unless rule
 
       @rule = rule
-      @app = rule['app']
+      @app = rule[:app]
     end
 
     def positive?
@@ -18,7 +18,7 @@ module PodIdent
     end
 
     def platform_rule
-      @rule['platform']
+      @rule[:platform]
     end
   end
 end

@@ -33,10 +33,9 @@ module PodIdent
 
     def find_rule
       RULES.detect do |rule|
-        rule.stringify_keys!
         found = false
 
-        match = rule['match']
+        match = rule.fetch(:match)
 
         found = apply_starts_with(match['startsWith'], found)
         found = apply_includes(match['includes'], found)

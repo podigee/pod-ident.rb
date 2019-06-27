@@ -3,6 +3,9 @@
 require 'yaml'
 require 'pry'
 
+require 'active_support'
+require 'active_support/core_ext/object'
+
 module PodIdent
   class RuleParser
     RULES_YAML = File.expand_path('../detection_rules.yml', __dir__)
@@ -33,19 +36,20 @@ module PodIdent
 
       File.open(RULES_RUBY, 'w') do |file|
         file.write(DO_NOT_EDIT_TEXT)
-        file.write("RULES = #{cleaned_rules}")
+        file.write("RULES = #{cleaned_rules}.freeze")
       end
     end
 
     def write_rules_spec_rb
+      all_rules = rules.dup.map do |rule|
+        rule.symbolize_keys!
+        rule
+      end
+
       File.open(RULES_SPEC_RUBY, 'w') do |file|
         file.write(DO_NOT_EDIT_TEXT)
-        file.write("RULES = #{rules_with_test}")
+        file.write("RULES = #{all_rules}.freeze")
       end
-    end
-
-    def rules_with_test
-      rules.select { |rule| rule['test'] }
     end
 
     def parse_yaml

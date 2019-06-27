@@ -2,14 +2,19 @@
 
 RSpec.describe PodIdent do
   RULES.each do |rule|
-    app = rule['app']
+    app = rule[:app]
+    test = rule[:test]
+
+    next unless test
+
     context "App: #{app}" do
-      rule['test']['userAgents'].each do |user_agent_rule|
+      test['userAgents'].each do |user_agent_rule|
         user_agent = user_agent_rule['userAgent']
         expecting_negative_result = user_agent_rule['negative'] || false
 
-        result = PodIdent::Detector.detect(user_agent)
         context user_agent do
+          let(:result) { PodIdent::Detector.detect(user_agent) }
+
           if expecting_negative_result
             it 'does not detect the app' do
               expect(result.app).to_not eq(app)
@@ -25,6 +30,12 @@ RSpec.describe PodIdent do
           end
         end
       end
+    end
+  end
+
+  specify 'every rule should have a `match` key' do
+    RULES.each do |rule|
+      expect(rule).to have_key(:match), rule
     end
   end
 end
