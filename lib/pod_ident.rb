@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'active_support'
-require 'active_support/core_ext/object'
-
 require 'pod_ident/version'
 require 'pod_ident/detection_rules'
 require 'pod_ident/detection_result'
@@ -21,7 +18,8 @@ module PodIdent
     end
 
     def detect
-      return nil if user_agent_string.blank?
+      # !~ /[^[:space:]]/ is what Active Support does to detect blank strings
+      return nil if user_agent_string !~ /[^[:space:]]/
 
       self.result = DetectionResult.new(find_rule, user_agent_string)
       identify_platform if result.positive?
