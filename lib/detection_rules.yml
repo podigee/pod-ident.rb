@@ -680,6 +680,19 @@
         platform: iOS
       - userAgent: Podcatcher Deluxe/2016.06
         negative: true
+
+- app: Audio Now
+  match:
+    startsWith: AudioNow
+    includes: audionow
+  platform:
+    regex: '(iOS|Android)'
+  test:
+    userAgents:
+      - userAgent: AudioNow/1.0.12 (de.dmhub.AudioNow; build:210789.411167595; iOS 10.3.3) Alamofire/4.8.2
+        platform: iOS
+      - userAgent: Android_de.dmhub.audionow_1.1.0
+        platform: Android
       
 - app: DIE ZEIT App
   match:

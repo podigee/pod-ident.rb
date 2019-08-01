@@ -36,7 +36,7 @@ module PodIdent
         match = rule.fetch(:match)
 
         found = apply_starts_with(match['startsWith'], found)
-        found = apply_includes(match['includes'], found)
+        found ||= apply_includes(match['includes'], found)
 
         excluding = match['excluding']
         if found && excluding
