@@ -60,6 +60,30 @@
       - userAgent: '(null)/(null) watchOS/5.0 model/Watch2,3 hwp/t8002 build/16R364 (6; dt:133)'
         platform: watchOS
 
+- app: CastBox
+  match:
+    startsWith:
+      - CastBox
+      - Castbox
+  platform:
+    regexes: 
+      - '(Android|iOS|OS\sVersion)'
+      - '(CastBox)'
+    replacements:
+      - name: OS Version
+        replaceWith: iOS
+      - name: CastBox
+        replaceWith: Android
+  test:
+    userAgents:
+      - userAgent: CastBox/7.11.3-180226133 (Linux;Android 4.1.2) ExoPlayerLib/2.4.0
+        platform: Android
+      - userAgent: Castbox/3.4.1 (fm.castbox.audiobook.radio.podcast; build:1; iOS 11.3.0) Alamofire/4.4.0
+        platform: iOS
+      - userAgent: CastBox/com.castbox.CastBox (1.0; OS Version 10.3.2 (Build 14F89))
+        platform: iOS
+
+
 - app: Amazon Alexa
   match:
     startsWith: Alexa
@@ -319,29 +343,6 @@
         platform: iOS
       - userAgent: Acast Windows # we don't have a real user agent for the Windows app yet
         platform: Windows
-
-- app: CastBox
-  match:
-    startsWith:
-      - CastBox
-      - Castbox
-  platform:
-    regexes: 
-      - '(Android|iOS|OS\sVersion)'
-      - '(CastBox)'
-    replacements:
-      - name: OS Version
-        replaceWith: iOS
-      - name: CastBox
-        replaceWith: Android
-  test:
-    userAgents:
-      - userAgent: CastBox/7.11.3-180226133 (Linux;Android 4.1.2) ExoPlayerLib/2.4.0
-        platform: Android
-      - userAgent: Castbox/3.4.1 (fm.castbox.audiobook.radio.podcast; build:1; iOS 11.3.0) Alamofire/4.4.0
-        platform: iOS
-      - userAgent: CastBox/com.castbox.CastBox (1.0; OS Version 10.3.2 (Build 14F89))
-        platform: iOS
 
 - app: Castro
   match:
@@ -679,6 +680,19 @@
         platform: iOS
       - userAgent: Podcatcher Deluxe/2016.06
         negative: true
+
+- app: Audio Now
+  match:
+    startsWith: AudioNow
+    includes: audionow
+  platform:
+    regex: '(iOS|Android)'
+  test:
+    userAgents:
+      - userAgent: AudioNow/1.0.12 (de.dmhub.AudioNow; build:210789.411167595; iOS 10.3.3) Alamofire/4.8.2
+        platform: iOS
+      - userAgent: Android_de.dmhub.audionow_1.1.0
+        platform: Android
       
 - app: DIE ZEIT App
   match:

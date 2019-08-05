@@ -3,9 +3,6 @@
 require 'yaml'
 require 'pry'
 
-require 'active_support'
-require 'active_support/core_ext/object'
-
 module PodIdent
   class RuleParser
     RULES_YAML = File.expand_path('../detection_rules.yml', __dir__)
@@ -42,8 +39,8 @@ module PodIdent
 
     def write_rules_spec_rb
       all_rules = rules.dup.map do |rule|
-        rule.symbolize_keys!
-        rule
+        # symbolize keys
+        Hash[rule.map { |(k, v)| [k.to_sym, v] }]
       end
 
       File.open(RULES_SPEC_RUBY, 'w') do |file|
