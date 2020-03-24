@@ -964,3 +964,15 @@
         platform: iPad
       - userAgent: ivooxNew/1 CFNetwork/975.0.3 Darwin/18.2.0
         platform: Apple device
+
+- app: FYEO
+  match:
+    startsWith: FYEO
+  platform:
+    regex: "(iOS|Android)"
+  test:
+    userAgents:
+      - userAgent: FYEO/0.9.0.2450-ce56a8c4/iOS_13.3.0/iPhone8,1
+        platform: iOS
+      - userAgent: FYEO/0.9.0.2290-6393b910/Android_10/SM-G973F
+        platform: Android
