@@ -52,7 +52,7 @@
 
 - app: Apple Podcasts
   match:
-    includes: watchOS 
+    includes: watchOS
   platform:
     text: watchOS
   test:
@@ -66,7 +66,7 @@
       - CastBox
       - Castbox
   platform:
-    regexes: 
+    regexes:
       - '(Android|iOS|OS\sVersion)'
       - '(CastBox)'
     replacements:
@@ -111,7 +111,7 @@
   match:
     startsWith: Deezer
   platform:
-    regexes: 
+    regexes:
       - '(Android|Darwin)'
       - '\((\w+\s*\w*)'
     replacements:
@@ -141,12 +141,12 @@
     userAgents:
       - userAgent: Overcast/2.0 (+http://overcast.fm/; iOS podcast app)
         platform: iOS
-      - userAgent: Overcast/3.0 (+http://overcast.fm/; iOS podcast app) BMID/E67A460F81 
+      - userAgent: Overcast/3.0 (+http://overcast.fm/; iOS podcast app) BMID/E67A460F81
         platform: iOS
 
 - app: Radio.net
   match:
-    startsWith: 
+    startsWith:
       - radio.net
       - radio.de
       - radio.at
@@ -202,7 +202,7 @@
 
 - app: ExoPlayer
   match:
-    startsWith: 
+    startsWith:
       - ExoPlayer
       - yourApplicationName
       - 'null'
@@ -219,7 +219,7 @@
         platform: Android
       - userAgent: md5d42223d6ee7473da82e8136ffb794439.App/4.100 (Linux;Android 8.0.0) ExoPlayerLib/2.8.3
         platform: Android
-      
+
 - app: Download Manager
   match:
     startsWith: AndroidDownloadManager
@@ -417,7 +417,7 @@
     excluding:
       regex: 'Android'
   platform:
-    regexes: 
+    regexes:
       - '(iPhone|iPad)'
   test:
     userAgents:
@@ -637,7 +637,7 @@
 
 - app: Procast
   match:
-    startsWith: 
+    startsWith:
       - Procast
       - ProCast
   platform:
@@ -676,7 +676,7 @@
     text: iOS
   test:
     userAgents:
-      - userAgent: Podcat%202/18084 CFNetwork/894 Darwin/17.4.0 
+      - userAgent: Podcat%202/18084 CFNetwork/894 Darwin/17.4.0
         platform: iOS
       - userAgent: Podcatcher Deluxe/2016.06
         negative: true
@@ -693,7 +693,7 @@
         platform: iOS
       - userAgent: Android_de.dmhub.audionow_1.1.0
         platform: Android
-      
+
 - app: DIE ZEIT App
   match:
     includes: ZONApp
@@ -710,7 +710,7 @@
   match:
     includes: FAZDERTAG
   platform:
-    regexes: 
+    regexes:
       - '(Android)'
       - '\((iPhone|iPad|iPod touch)'
   test:
@@ -724,7 +724,7 @@
   match:
     includes: AntenneBayern
   platform:
-    regexes: 
+    regexes:
       - '(Android)'
       - '\((iPhone|iPad|iPod touch)'
   test:
@@ -754,7 +754,7 @@
       - FBAN
       - FBAV
   platform:
-    regexes: 
+    regexes:
       - '\((iPhone|iPad|iPod touch)'
       - '(Android)'
   test:
@@ -772,7 +772,7 @@
   match:
     includes: Instagram
   platform:
-    regexes: 
+    regexes:
       - '(iPad)' # iPhone app can be installed on iPad
       - '(iPhone|Android)'
   test:
@@ -807,7 +807,7 @@
   match:
     includes: Pinterest
   platform:
-    regexes: 
+    regexes:
       - '(Android)'
       - '\((iPhone|iPad|iPod touch)'
   test:
@@ -821,7 +821,7 @@
 
 - app: Windows Media Player
   match:
-    startsWith: 
+    startsWith:
       - NSPlayer
       - WMPlayer
   platform:
@@ -838,7 +838,7 @@
 - app: Sonos
   match:
     includes: Sonos
-  platform: 
+  platform:
     text: Sonos
   test:
     userAgents:
@@ -905,7 +905,7 @@
 - app: Unknown client
   match:
     startsWith: '(null)'
-  platform: 
+  platform:
     regex: '(iPhone|iPad|iPod touch)'
   test:
     userAgents:
@@ -926,7 +926,7 @@
   match:
     includes: Flipboard
   platform:
-    regexes: 
+    regexes:
       - '(Android)'
       - '\((iPhone|iPad|iPod touch|Macintosh)'
     replacements:
@@ -974,5 +974,13 @@
     userAgents:
       - userAgent: FYEO/0.9.0.2450-ce56a8c4/iOS_13.3.0/iPhone8,1
         platform: iOS
+      - userAgent: FYEO/1.0.1.2907-861d96cd/iOS_13.4.0/iPhone12,1
+        platform: iOS
       - userAgent: FYEO/0.9.0.2290-6393b910/Android_10/SM-G973F
         platform: Android
+      - userAgent: FYEO/1.0.2_3024-f737eb44/Android_8.0.0/SM-G960U1
+        platform: Android
+      - userAgent: FYEO/1.0.2_3024-f737eb44/Android_10/Pixel 4
+        platform: Android
+      - userAgent: FYEO/1.0
+        platform:
