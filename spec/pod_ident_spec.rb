@@ -35,7 +35,7 @@ RSpec.describe PodIdent do
 
   specify 'every rule should have a `match` key' do
     RULES.each do |rule|
-      expect(rule).to have_key(:match), rule
+      expect(rule).to have_key(:match), "rule does not have 'match' key: #{rule}"
     end
   end
 end
