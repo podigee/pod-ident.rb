@@ -2,9 +2,8 @@ name: Ruby
 
 on:
   push:
-    branches: [ github-actions ]
+    branches: [ master ]
   pull_request:
-    branches: [ github-actions ]
 
 jobs:
   ruby:
