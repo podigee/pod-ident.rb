@@ -989,13 +989,15 @@
   match:
     startsWith: AmazonMusic
   platform:
-    regex: "(iPhone|Android|MacOS|Fire OS)"
+    regex: "(iPhone|Android|MacOS|Fire OS|iPad)"
   test:
     userAgents:
       - userAgent: AmazonMusic/9.15.2 iPhone11,2 CFNetwork/1128.0.1 Darwin/19.6.0
         platform: iPhone
       - userAgent: AmazonMusic/9.15.2 iPhone8,4 CFNetwork/1128.0.1 Darwin/19.6.0
         platform: iPhone
+      - userAgent: AmazonMusic/iPad
+        platform: iPad
       - userAgent: AmazonMusic/16.17.1 Dalvik/2.1.0 (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020)
         platform: Android
       - userAgent: AmazonMusic/MacOS
