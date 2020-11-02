@@ -1004,3 +1004,15 @@
         platform: MacOS
       - userAgent: AmazonMusic/Fire OS
         platform: Fire OS
+
+- app: Podimo
+  match:
+    startsWith: Podimo
+  platform:
+    regex: "(iOS|Android)"
+  test:
+    userAgents:
+      - userAgent: Podimo/1.1 build 123/iOS 14.1
+        platform: iOS
+      - userAgent: Podimo/1.1 build 123/Android (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020)
+        platform: Android
