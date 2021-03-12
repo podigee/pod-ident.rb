@@ -49,7 +49,7 @@ Or install it yourself as:
 require 'pod_ident'
 
 user_agent = 'AppleCoreMedia/1.0.0.10B500 (iPod; U; CPU OS 6_1_6 like Mac OS X; en_gb)'
-result = PodIdent.detect(user_agent)
+result = PodIdent::Detector.detect(user_agent)
 
 puts result.app 
 => 'Apple Podcasts'
