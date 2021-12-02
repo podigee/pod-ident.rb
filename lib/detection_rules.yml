@@ -1016,3 +1016,17 @@
         platform: iOS
       - userAgent: Podimo/1.1 build 123/Android (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020)
         platform: Android
+
+- app: ARD Audiothek
+  match:
+    startsWith: ARD Audiothek
+  platform:
+    regex: "(iOS|Android)"
+  test:
+    userAgents:
+      - userAgent: "ARD Audiothek Android-Auto 2.3.2 - Android Auto/2.3.2 (Linux;Android 11) ExoPlayerLib/2.14.1"
+        platform: Android
+      - userAgent: "ARD Audiothek Android Production 2.3.2/2.3.2 (Linux;Android 10) ExoPlayerLib/2.14.1"
+        platform: Android
+      - userAgent: "ARD Audiothek iOS Version 2.3.4, Build 41"
+        platform: iOS
