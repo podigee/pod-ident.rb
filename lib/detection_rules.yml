@@ -60,6 +60,47 @@
       - userAgent: '(null)/(null) watchOS/5.0 model/Watch2,3 hwp/t8002 build/16R364 (6; dt:133)'
         platform: watchOS
 
+- app: Spotify
+  match:
+    startsWith: Spotify
+  platform:
+    regexes:
+      - '(Android|iOS)'
+  test:
+    userAgents:
+      - userAgent: "Spotify/8.7.18.1138 Android/28 (ANE-LX1)"
+        platform: Android
+      - userAgent: "Spotify/8.7.18.1138 Android/29 (MAR-LX1A)"
+        platform: Android
+      - userAgent: "Spotify/8.7.18.1138 Android/32 (Pixel 4a)"
+        platform: Android
+      - userAgent: "Spotify/8.7.16 iOS/15.1 (iPhone12,3)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.16 iOS/15.3.1 (iPhone12,1)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.18.1138 Android/29 (M2006C3LG)"
+        platform: Android
+      - userAgent: "Spotify/8.7.14 iOS/14.8 (iPhone13,1)"
+        platform: iOS
+      - userAgent: "Spotify/8.6.62 iOS/14.7.1 (iPhone8,2)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.16.1354 Android/29 (MAR-LX1A)"
+        platform: Android
+      - userAgent: "Spotify/8.7.18 iOS/15.4.1 (iPhone13,4)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.18 iOS/15.4 (iPhone12,1)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.18 iOS/15.4 (iPhone11,8)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.18 iOS/15.2.1 (iPhone12,8)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.16.1354 Android/28 (ANE-LX1)"
+        platform: Android
+      - userAgent: "Spotify/8.7.18 iOS/13.6 (iPhone8,1)"
+        platform: iOS
+      - userAgent: "Spotify/8.7.18.1138 Android/30 (ONEPLUS A6003)"
+        platform: Android
+
 - app: CastBox
   match:
     startsWith:
