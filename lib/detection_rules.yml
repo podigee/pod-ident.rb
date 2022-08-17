@@ -1071,3 +1071,13 @@
         platform: Android
       - userAgent: "ARD Audiothek iOS Version 2.3.4, Build 41"
         platform: iOS
+
+- app: Samsung Podcast
+  match:
+    startsWith: "sp-agent"
+  platform:
+    text: "Android"
+  test:
+    userAgents:
+      - userAgent: "sp-agent"
+        platform: Android

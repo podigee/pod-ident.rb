@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pod_ident (1.0.6)
+    pod_ident (1.0.8)
 
 GEM
   remote: https://rubygems.org/
