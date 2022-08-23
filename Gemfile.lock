@@ -33,7 +33,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16)
+  bundler (~> 2.3.20)
   pod_ident!
   pry
   rake (~> 13.0)
@@ -41,4 +41,4 @@ DEPENDENCIES
   rspec_junit_formatter
 
 BUNDLED WITH
-   1.17.3
+   2.3.20
