@@ -57,6 +57,21 @@ puts result.platform
 => 'iPod'
 ```
 
+### Bot detection
+
+
+```ruby
+require 'pod_ident'
+
+user_agent = 'Mozilla/5.0 (compatible; archive.org_bot http://archive.org/details/archive.org_bot)'
+result = PodIdent::Detector.detect(user_agent)
+
+puts result.app 
+=> 'Archive.org'
+puts result.bot? 
+=> true
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -66,6 +81,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 The detection rules are found as a yaml file under `lib/detection_rules.yml`. 
 
 Please, only edit this file, and afterwards run `bin/parse-rules` in order to generate both the detection rules as a `rb` file for production usage, and the complete rules with their corresponding test cases for testing.
+
+### Update bot detection rules
+
+For the bot detection rules we are using [ user-agents-v2](https://github.com/opawg/user-agents-v2/blob/master/src/bots.json), to import the json of this project and transform it into a yaml file readable by pod-ident you can run the following task: `rake update_bot_rules`.
+
+Once the yml file created run `bin/parse-rules` to generate all rb detection rules files for bots.
 
 ## Contributing
 
