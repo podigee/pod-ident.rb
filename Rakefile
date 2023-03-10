@@ -33,7 +33,7 @@ task :update_bot_rules do
   def generate_entry_yml(entry)
     { 'app' => entry['name'],
       'match' => { 'regex' => (entry['pattern']) },
-      'platform' => '' }.merge(
+      'platform' => 'bot' }.merge(
         entry_test_value(entry['examples'])
       )
   end
