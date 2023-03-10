@@ -22,10 +22,16 @@ module PodIdent
       # !~ /[^[:space:]]/ is what Active Support does to detect blank strings
       return nil if user_agent_string !~ /[^[:space:]]/
 
-      self.result = DetectionResult.new(find_rule, user_agent_string)
+      rule = find_rule || find_rule_bots
+
+      self.result = DetectionResult.new(rule, user_agent_string)
       identify_platform if result.positive?
 
       result
+    end
+
+    def self.bot?
+      find_rule_bots
     end
 
     private
@@ -49,6 +55,15 @@ module PodIdent
         end
 
         found
+      end
+    end
+
+    def find_rule_bots
+      BOTS_RULES.detect do |rule|
+        match = rule.fetch(:match)
+        regex = match['regex']
+        match = Regexp.new(regex).match(user_agent_string)
+        !match.nil?
       end
     end
 
@@ -93,7 +108,9 @@ module PodIdent
         true
       end
 
-      result.platform = result.platform_rule['fallback'] if !result.platform && result.platform_rule['fallback']
+      return unless !result.platform && result.platform_rule['fallback']
+
+      result.platform = result.platform_rule['fallback']
     end
 
     def replace_name(target, replacements)
