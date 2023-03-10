@@ -53,16 +53,20 @@
 - app: Apple Podcasts
   match:
     includes: watchOS
+    excluding:
+      regex: '^atc/|\\(null\\) watchOS/'
   platform:
     text: watchOS
   test:
     userAgents:
-      - userAgent: '(null)/(null) watchOS/5.0 model/Watch2,3 hwp/t8002 build/16R364 (6; dt:133)'
+      - userAgent: 'watchOS/5.0 model/Watch2,3 hwp/t8002 build/16R364 (6; dt:133)'
         platform: watchOS
 
 - app: Spotify
   match:
     startsWith: Spotify
+    excluding:
+      regex: '^Spotify/1\\.0$'
   platform:
     regexes:
       - '(Android|iOS)'
@@ -176,6 +180,8 @@
 - app: Overcast
   match:
     startsWith: Overcast
+    excluding:
+      regex: '^Overcast/1\\.0 Podcast Sync'
   platform:
     text: 'iOS'
   test:
@@ -429,6 +435,8 @@
 - app: Podbean
   match:
     startsWith: Podbean
+    excluding:
+      regex: "^Podbean Importer"
   platform:
     regex: '(iOS|Android)'
   test:
@@ -828,6 +836,8 @@
 - app: Twitter in-app browser
   match:
     includes: Twitter
+    excluding:
+      regex: "^TelegramBot "
   platform:
     regex: '(iPhone|iPad|Darwin|Android)'
     replacements:
@@ -946,6 +956,8 @@
 - app: Unknown client
   match:
     startsWith: '(null)'
+    excluding:
+      regex: '^atc/|\\(null\\) watchOS/'
   platform:
     regex: '(iPhone|iPad|iPod touch)'
   test:
@@ -966,6 +978,8 @@
 - app: Flipboard
   match:
     includes: Flipboard
+    excluding:
+      regex: FlipboardProxy/
   platform:
     regexes:
       - '(Android)'
@@ -979,8 +993,6 @@
         platform: Android
       - userAgent: Mozilla/5.0 (iPad; CPU OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Mobile/14E304 Flipboard/4.2.20
         platform: iPad
-      - userAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:49.0) Gecko/20100101 Firefox/49.0 (FlipboardProxy/1.2; +http://flipboard.com/browserproxy)
-        platform: Mac
 
 - app: iVoox
   match:

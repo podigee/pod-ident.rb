@@ -65,8 +65,7 @@
     - userAgent: atc/1.0 watchOS/7.1 model/Watch5,1 hwp/t8006 build/18R590 (6; dt:201)
     - userAgent: atc/1.0 watchOS/7.1 model/Watch5,3 hwp/t8006 build/18R590 (6; dt:202)
     - userAgent: atc/1.0 watchOS/7.1 model/Watch5,4 hwp/t8006 build/18R590 (6; dt:202)
-    - userAgent: "(null)/(null) watchOS/5.0.1 model/Watch3,3 hwp/t8004 build/16R381
-        (6; dt:155)"
+    - userAgent: "(null)/(null) watchOS/5.0.1 model/Watch3,3 hwp/t8004 build/16R381 (6; dt:155)"
 - app: Apple Podcasts automated checks
   match:
     regex: "(iTMS|itunesstored)"
