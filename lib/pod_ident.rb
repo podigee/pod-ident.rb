@@ -2,6 +2,7 @@
 
 require 'pod_ident/version'
 require 'pod_ident/detection_rules'
+require 'pod_ident/detection_rules_bots'
 require 'pod_ident/detection_result'
 
 module PodIdent
