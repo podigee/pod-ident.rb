@@ -14,7 +14,7 @@ module PodIdent
     end
 
     def bot?
-      @rule[:platform] == 'bot'
+      !@rule.nil? && @rule[:platform] == 'bot'
     end
 
     def positive?
