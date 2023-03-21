@@ -4,6 +4,7 @@ require 'bundler/setup'
 require 'pry'
 require 'pod_ident'
 require './spec/detection_rules'
+require './spec/detection_rules_bots'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

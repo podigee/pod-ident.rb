@@ -13,6 +13,10 @@ module PodIdent
       @app = rule[:app]
     end
 
+    def bot?
+      !@rule.nil? && @rule[:platform] == 'bot'
+    end
+
     def positive?
       !@app.nil?
     end
