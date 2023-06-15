@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pod_ident (1.1.0)
+    pod_ident (1.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -33,7 +33,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 2.3.20)
+  bundler (~> 2.0)
   pod_ident!
   pry
   rake (~> 13.0)
@@ -41,4 +41,4 @@ DEPENDENCIES
   rspec_junit_formatter
 
 BUNDLED WITH
-   2.3.20
+   2.4.14
