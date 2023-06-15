@@ -1093,3 +1093,13 @@
     userAgents:
       - userAgent: "sp-agent"
         platform: Android
+
+- app: RTL+
+  match:
+    startsWith: "RTL+"
+  platform:
+    regex: "(iOS|Android)"
+  test:
+    userAgents:
+      - userAgent: "RTL+/2.8.4.5-live-prod (Linux;Android 12) ExoPlayerLib/2.18.0"
+        platform: Android
