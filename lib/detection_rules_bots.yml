@@ -65,7 +65,8 @@
     - userAgent: atc/1.0 watchOS/7.1 model/Watch5,1 hwp/t8006 build/18R590 (6; dt:201)
     - userAgent: atc/1.0 watchOS/7.1 model/Watch5,3 hwp/t8006 build/18R590 (6; dt:202)
     - userAgent: atc/1.0 watchOS/7.1 model/Watch5,4 hwp/t8006 build/18R590 (6; dt:202)
-    - userAgent: "(null)/(null) watchOS/5.0.1 model/Watch3,3 hwp/t8004 build/16R381 (6; dt:155)"
+    - userAgent: "(null)/(null) watchOS/5.0.1 model/Watch3,3 hwp/t8004 build/16R381
+        (6; dt:155)"
 - app: Apple Podcasts automated checks
   match:
     regex: "(iTMS|itunesstored)"
@@ -134,6 +135,20 @@
   test:
     userAgents:
     - userAgent: bl.uk_ldfc_bot/3.4.0-20200518 ( http://www.bl.uk/aboutus/legaldeposit/websites/websites/faqswebmaster/index.html)
+- app: Blubrry Migration Service
+  match:
+    regex: "^Blubrry Migration Service"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Blubrry Migration Service
+- app: Buzzsprout Importer
+  match:
+    regex: "^Buzzsprout Importer"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Buzzsprout Importer
 - app: CastFeedValidator
   match:
     regex: "^CastFeedValidator/"
@@ -184,6 +199,13 @@
   match:
     regex: "^datagnionbot"
   platform: bot
+- app: dataprovider.com
+  match:
+    regex: Dataprovider\.com
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 (compatible; Dataprovider.com)
 - app: Daum
   match:
     regex: http://cs\.daum\.net
@@ -713,6 +735,13 @@
   match:
     regex: "^StitcherBot"
   platform: bot
+- app: Substack Content Fetcher
+  match:
+    regex: "^SubstackContentFetch/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: SubstackContentFetch/1.0 (https://substack.com/)
 - app: Timpi search crawler
   match:
     regex: Timpibot/
