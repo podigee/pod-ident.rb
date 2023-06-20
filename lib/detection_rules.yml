@@ -1098,8 +1098,10 @@
   match:
     startsWith: "RTL+"
   platform:
-    regex: "(iOS|Android)"
+    regex: "(iOS|iPhone|Android)"
   test:
     userAgents:
       - userAgent: "RTL+/2.8.4.5-live-prod (Linux;Android 12) ExoPlayerLib/2.18.0"
         platform: Android
+      - userAgent: "RTL+/1.0.0.18H107 (iPhone; U; CPU OS 14_8_1 like Mac OS X; de_de)"
+        platform: iPhone
