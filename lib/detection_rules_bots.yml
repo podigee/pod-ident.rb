@@ -6,6 +6,13 @@
   test:
     userAgents:
     - userAgent: AAABot
+- app: Adswizz
+  match:
+    regex: "^AIS VirtualListener"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: AIS VirtualListener
 - app: AhrefsBot
   match:
     regex: AhrefsBot/
@@ -69,7 +76,7 @@
         (6; dt:155)"
 - app: Apple Podcasts automated checks
   match:
-    regex: "(iTMS|itunesstored)"
+    regex: "(iTMS|itunesstored|itms)"
   platform: bot
 - app: Applebot
   match:
@@ -158,11 +165,12 @@
     - userAgent: CastFeedValidator/3.0.5 (https://castfeedvalidator.com)
 - app: Castopod
   match:
-    regex: Castopod/1\.0
+    regex: Castopod/\d
   platform: bot
   test:
     userAgents:
     - userAgent: Castopod/1.0
+    - userAgent: Castopod/1.1.2
 - app: Chartable
   match:
     regex: "^Trackable/"
@@ -279,6 +287,14 @@
   test:
     userAgents:
     - userAgent: Feedly/1.0 (+http://www.feedly.com/fetcher.html; like FeedFetcher-Google)
+- app: Feedspot Fetcher
+  match:
+    regex: https://www\.feedspot\.com/fs/fetcher
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 (compatible; Feedspot/1.0 (+https://www.feedspot.com/fs/fetcher;
+        like FeedFetcher-Google)
 - app: FlexGet
   match:
     regex: "^FlexGet/"
@@ -311,6 +327,13 @@
   test:
     userAgents:
     - userAgent: Goodpods/2.2
+- app: Google Adsense Bot
+  match:
+    regex: Mediapartners-Google
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mediapartners-Google
 - app: Google AdsBot
   match:
     regex: AdsBot-Google
@@ -321,7 +344,7 @@
   platform: bot
 - app: Googlebot
   match:
-    regex: Googlebot/|Googlebot-Video/|Googlebot-Image/|^Feedfetcher-Google
+    regex: Googlebot/|Googlebot-Video/|Googlebot-Image/|^Feedfetcher-Google|google-xrawler
   platform: bot
   test:
     userAgents:
@@ -331,6 +354,7 @@
     - userAgent: Googlebot-Image/1.0
     - userAgent: Feedfetcher-Google; (+http://www.google.com/feedfetcher.html; 1 subscribers;
         feed-id=4653447469100830145)
+    - userAgent: google-xrawler
 - app: Gumball
   match:
     regex: "^Gumball"
@@ -469,6 +493,13 @@
   test:
     userAgents:
     - userAgent: Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)
+- app: Newspaper
+  match:
+    regex: "^newspaper/\\d"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: newspaper/0.3.0
 - app: OgScrper
   match:
     regex: OgScrper
@@ -538,6 +569,20 @@
   test:
     userAgents:
     - userAgent: Podcastindex.org/v0.3.3 (Aggrivate)
+- app: Podcast de facto Standard
+  match:
+    regex: "^PodcastStandard/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: PodcastStandard/0.1.0 (+https://podcast-standard.org)
+- app: Podcast Archiver
+  match:
+    regex: "^Podcast%20Archiver/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Podcast%20Archiver/3000000003 CFNetwork/1406.0.4 Darwin/22.4.0
 - app: PodCloud
   match:
     regex: podCloud
@@ -637,6 +682,13 @@
   match:
     regex: python-requests
   platform: bot
+- app: Qiniu spider
+  match:
+    regex: qiniu.*spider
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: z0-qiniu-imgstg-spider-1.0
 - app: RedCircle
   match:
     regex: RedCircle
@@ -742,6 +794,14 @@
   test:
     userAgents:
     - userAgent: SubstackContentFetch/1.0 (https://substack.com/)
+- app: SupportingCast
+  match:
+    regex: "^SupportingCast(/.*)?$"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: SupportingCast/1.0
+    - userAgent: SupportingCast
 - app: Timpi search crawler
   match:
     regex: Timpibot/
@@ -790,6 +850,20 @@
   test:
     userAgents:
     - userAgent: TelegramBot (like TwitterBot)
+- app: theTradeDesk Content Web Scraper
+  match:
+    regex: TTD-Content
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 (compatible; TTD-Content; +https://www.thetradedesk.com/general/ttd-content)
+- app: Veritone Engine Toolkit
+  match:
+    regex: "^veritone/engine-toolkit"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: veritone/engine-toolkit-3.0
 - app: Vurbl
   match:
     regex: VurblBot
@@ -815,6 +889,13 @@
   test:
     userAgents:
     - userAgent: ZDM/4.0; Windows Mobile 7.0;
+- app: Windows PowerShell
+  match:
+    regex: WindowsPowerShell/
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.19041.2673
 - app: WordPress
   match:
     regex: "^WordPress"
