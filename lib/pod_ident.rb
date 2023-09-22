@@ -3,6 +3,7 @@
 require 'pod_ident/version'
 require 'pod_ident/detection_rules'
 require 'pod_ident/detection_rules_bots'
+require 'pod_ident/detection_rules_custom_bots'
 require 'pod_ident/detection_result'
 
 module PodIdent
@@ -22,7 +23,7 @@ module PodIdent
       # !~ /[^[:space:]]/ is what Active Support does to detect blank strings
       return nil if user_agent_string !~ /[^[:space:]]/
 
-      rule = find_rule || find_rule_bots
+      rule = find_rule || find_rule_bots || find_rule_custom_bots
 
       self.result = DetectionResult.new(rule, user_agent_string)
       identify_platform if result.positive?
@@ -31,7 +32,7 @@ module PodIdent
     end
 
     def self.bot?
-      find_rule_bots
+      find_rule_bots || find_rule_custom_bots
     end
 
     private
@@ -60,6 +61,15 @@ module PodIdent
 
     def find_rule_bots
       BOTS_RULES.detect do |rule|
+        match = rule.fetch(:match)
+        regex = match['regex']
+        match = Regexp.new(regex).match(user_agent_string)
+        !match.nil?
+      end
+    end
+
+    def find_rule_custom_bots
+      CUSTOM_BOTS_RULES.detect do |rule|
         match = rule.fetch(:match)
         regex = match['regex']
         match = Regexp.new(regex).match(user_agent_string)

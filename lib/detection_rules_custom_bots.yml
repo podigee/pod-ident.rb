@@ -1,0 +1,8 @@
+---
+- app: curl
+  match:
+    regex: "^Faraday for Podigee"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Faraday for Podigee (like curl)
