@@ -191,7 +191,7 @@
       - userAgent: Overcast/3.0 (+http://overcast.fm/; iOS podcast app) BMID/E67A460F81
         platform: iOS
 
-- app: Radio.net
+- app: radio.net
   match:
     startsWith:
       - radio.net
@@ -204,13 +204,17 @@
       - radio.pt
       - radio.pl
   platform:
-    regex: '(Android|Darwin)'
+    regex: '(Android|Darwin|Linux)'
     replacements:
       - name: Darwin
         replaceWith: iOS
+      - name: Linux
+        replaceWith: Android
   test:
     userAgents:
       - userAgent: radio.de 4.9.3 (softwinner/QT-7; Android 4.4.2; de_DE)
+        platform: Android
+      - userAgent: radio.de/5.13.0. 1-app (Linux; 13) ExoPlayerLib/2.19.1
         platform: Android
       - userAgent: radio.de/3735 CFNetwork/758.5.3 Darwin/15.6.0
         platform: iOS
