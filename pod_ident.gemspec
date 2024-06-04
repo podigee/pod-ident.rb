@@ -15,6 +15,10 @@ Gem::Specification.new do |spec|
     Library to identify podcast client user agents and translate them into human readable information.'
   HEREDOC
   spec.homepage = 'https://www.podigee.com'
+  spec.metadata = {
+    'source_code_uri' => 'https://github.com/podigee/pod-ident.rb',
+    'changelog_uri' => 'https://github.com/podigee/pod-ident.rb/blob/master/CHANGELOG.md'
+  }
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
