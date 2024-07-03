@@ -51,6 +51,14 @@
   test:
     userAgents:
     - userAgent: AnchorImport/1.0
+- app: Apache HTTPClient
+  match:
+    regex: "^Apache\\-HttpClient"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Apache-HttpClient/5.1.4 (Java/1.8.0_144)
+    - userAgent: Apache-HttpClient/5.1.4 (Java/1.8.0_91)
 - app: Apple Podcasts (Watch)
   match:
     regex: "^atc/|\\(null\\) watchOS/"
