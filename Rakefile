@@ -27,7 +27,7 @@ task :update_bot_rules do
 
   def json_content
     json = File.open(BOT_JSON).read
-    content = JSON.parse(json)
+    JSON.parse(json)
   end
 
   def generate_entry_yml(entry)

@@ -13,6 +13,13 @@
   test:
     userAgents:
     - userAgent: AIS VirtualListener
+- app: ma Podcast (agma) Bot
+  match:
+    regex: "^agma/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: agma/1.0
 - app: AhrefsBot
   match:
     regex: AhrefsBot/
@@ -40,6 +47,13 @@
   test:
     userAgents:
     - userAgent: Alignabot 1.0 (https://www.alignable.com/)
+- app: All Ears
+  match:
+    regex: "^AllEars/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: AllEars/1.0; (+www.allears.ai)
 - app: Amazon Music Podcasts Bot
   match:
     regex: "^Amazon Music Podcast"
@@ -51,14 +65,14 @@
   test:
     userAgents:
     - userAgent: AnchorImport/1.0
-- app: Apache HTTPClient
+- app: Apple Notes share extension
   match:
-    regex: "^Apache\\-HttpClient"
+    regex: "^com.apple.(mobilenotes.SharingExtension|Notes.SharingExtension)/"
   platform: bot
   test:
     userAgents:
-    - userAgent: Apache-HttpClient/5.1.4 (Java/1.8.0_144)
-    - userAgent: Apache-HttpClient/5.1.4 (Java/1.8.0_91)
+    - userAgent: com.apple.mobilenotes.SharingExtension/2511 CFNetwork/1494.0.7 Darwin/23.4.0
+    - userAgent: com.apple.Notes.SharingExtension/2812 CFNetwork/1494.0.7 Darwin/23.4.0
 - app: Apple Podcasts (Watch)
   match:
     regex: "^atc/|\\(null\\) watchOS/"
@@ -143,6 +157,13 @@
   test:
     userAgents:
     - userAgent: bbot/0.1
+- app: Beacon Podcast Sync
+  match:
+    regex: "^Beacon/\\d"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Beacon/1.0 Podcast Sync +https://getbeacons.com/
 - app: British Library
   match:
     regex: "^bl\\.uk_ldfc_bot"
@@ -157,6 +178,13 @@
   test:
     userAgents:
     - userAgent: Blubrry Migration Service
+- app: Bullhorn Crawler
+  match:
+    regex: "^BullhornCrawler/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: BullhornCrawler/unknown-version(+http://bullhorn.fm/)
 - app: Buzzsprout Importer
   match:
     regex: "^Buzzsprout Importer"
@@ -164,6 +192,14 @@
   test:
     userAgents:
     - userAgent: Buzzsprout Importer
+- app: Bytespider.*bytedance
+  match:
+    regex: Bytespider
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like
+        Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)
 - app: CastFeedValidator
   match:
     regex: "^CastFeedValidator/"
@@ -187,6 +223,14 @@
   match:
     regex: "^clark-crawler2"
   platform: bot
+- app: Claudebot
+  match:
+    regex: ClaudeBot/
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0;
+        +claudebot@anthropic.com)
 - app: Critical Mention
   match:
     regex: "^Podcast-CriticalMention/"
@@ -229,6 +273,13 @@
   test:
     userAgents:
     - userAgent: Mozilla/5.0 (compatible; Daum/4.1; +http://cs.daum.net/faq/15/4118.html?faqId=28966)
+- app: Deepcast Podcast Sync
+  match:
+    regex: "^DeepCast/\\d.*Sync"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: DeepCast/4.3.0 Podcast Sync (+https://deepcast.fm)
 - app: Deezer Podcasters
   match:
     regex: "^Deezer Podcasters/1\\.0"
@@ -352,7 +403,7 @@
   platform: bot
 - app: Googlebot
   match:
-    regex: Googlebot/|Googlebot-Video/|Googlebot-Image/|^Feedfetcher-Google|google-xrawler
+    regex: Googlebot/|Googlebot-Video/|Googlebot-Image/|^Feedfetcher-Google|google-xrawler|^Googlebot-News|^Google-Safety$
   platform: bot
   test:
     userAgents:
@@ -363,6 +414,8 @@
     - userAgent: Feedfetcher-Google; (+http://www.google.com/feedfetcher.html; 1 subscribers;
         feed-id=4653447469100830145)
     - userAgent: google-xrawler
+    - userAgent: Googlebot-News Audio
+    - userAgent: Google-Safety
 - app: Gumball
   match:
     regex: "^Gumball"
@@ -372,7 +425,7 @@
     - userAgent: Gumball.fm Analytics Prefix Checker
 - app: Headliner
   match:
-    regex: Headliner/
+    regex: "^Headliner/.*\\+https://headliner\\.app$"
   platform: bot
   test:
     userAgents:
@@ -392,6 +445,22 @@
     userAgents:
     - userAgent: Mozilla/5.0 (compatible; special_archiver; Archive-It; http://archive-it.org/files/site-owners-special.html)
     - userAgent: ia_archiver-web.archive.org
+- app: iOS share menu
+  match:
+    regex: "^SharingUIService/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: SharingUIService/1 CFNetwork/1467.1 Darwin/23.0.0
+    - userAgent: SharingUIService/1 CFNetwork/1490.0.4 Darwin/23.2.0
+- app: IPFS Podcasting Node
+  match:
+    regex: "^IPFS Podcasting Node/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: IPFS Podcasting Node/0.6n (+https://ipfspodcasting.net)
+    - userAgent: IPFS Podcasting Node/0.7p,u,s (+https://ipfspodcasting.net)
 - app: Jaunt
   match:
     regex: "^Jaunt/"
@@ -403,6 +472,13 @@
   match:
     regex: INA dlweb
   platform: bot
+- app: Library and Archives Canada
+  match:
+    regex: LAC_IAHarvester/
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 (compatible; LAC_IAHarvester/3.3.0; +https://library-archives.canada.ca/eng/services/government-canada/web-social-media-preservation-program/Pages/web-archive.aspx)
 - app: Libsyn
   match:
     regex: "^Libsyn4"
@@ -421,6 +497,13 @@
   match:
     regex: LivelapBot
   platform: bot
+- app: ListenNotes
+  match:
+    regex: "^ListenNotes/3\\.0 \\("
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: ListenNotes/3.0 (id=c1ef144e30174bf6ba1fedf9174ed908; +https://www.listennotes.com/about/)
 - app: LTX71
   match:
     regex: "^ltx71 "
@@ -428,6 +511,14 @@
   test:
     userAgents:
     - userAgent: ltx71 - (http://ltx71.com/)
+- app: MacOS share menu
+  match:
+    regex: "^ShareSheetUI/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: ShareSheetUI/1 CFNetwork/1399.4 Darwin/22.1.0
+    - userAgent: ShareSheetUI/1 CFNetwork/1474 Darwin/23.0.0
 - app: MauiBot
   match:
     regex: "^MauiBot"
@@ -442,6 +533,13 @@
   test:
     userAgents:
     - userAgent: http.rb/5.0.4 (Mastodon/3.5.3; +https://mastodon.xyz/) Bot
+- app: Metacast Crawler
+  match:
+    regex: "^Metacast/.* Crawler"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Metacast/1.0 Crawler +https://metacast.app
 - app: Microsoft Bingbot
   match:
     regex: "(BingPreview/|adidxbot/|[bB]ingbot/)"
@@ -526,6 +624,16 @@
   test:
     userAgents:
     - userAgent: op3-fetcher/1.0 (https://op3.dev)
+- app: OpenAI GPTBot
+  match:
+    regex: GPTBot/
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.2;
+        +https://openai.com/gptbot)
+    - userAgent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.0;
+        +https://openai.com/gptbot)
 - app: Overcast feed parser
   match:
     regex: "^Overcast/1\\.0 Podcast Sync"
@@ -533,6 +641,8 @@
   test:
     userAgents:
     - userAgent: Overcast/1.0 Podcast Sync
+    - userAgent: Overcast/1.0 Podcast Sync (+http://overcast.fm/)
+    - userAgent: Overcast/1.0 Podcast Sync (1 subscribers; feed-id=1234567; +http://overcast.fm/)
 - app: Pandora RSS crawler
   match:
     regex: "^PandoraRSSCrawler"
@@ -645,6 +755,28 @@
   match:
     regex: "(podnods-crawler|podnods)"
   platform: bot
+- app: Podplay Podcast Sync
+  match:
+    regex: "^Podplay-Podcast-Sync/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Podplay-Podcast-Sync/1.0 (+https://podplay.com/articles/contact)
+- app: Podroll Analyzer
+  match:
+    regex: "^pdrl\\.fm "
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: pdrl.fm Analyzer / 1.0.0
+- app: Podscan Bot
+  match:
+    regex: "^PodscanBot/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: PodscanBot/1.1.0 Ubuntu/22.04 (Linux) +https://podscan.fm
+    - userAgent: PodscanBot/1.1.0 Ubuntu/22.04 (Linux) Podscan.fm
 - app: Podscribe
   match:
     regex: "(^Adswizz-podscribe/|^Podscribe/)"
@@ -653,6 +785,15 @@
     userAgents:
     - userAgent: Adswizz-podscribe/1.0
     - userAgent: Podscribe/1.1
+- app: PodUptime
+  match:
+    regex: "(PodUptime|PodUptimeBot)/\\d"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0 (compatible; PodUptime/1.0; +https://poduptime.com)
+    - userAgent: Mozilla/5.0 (compatible; PodUptimeBot/1.0; +https://poduptime.com;
+        rid:5c02fc9b-2660-4d3e-a352-de1a1aabdc0a)
 - app: Podverse Feed Parser
   match:
     regex: "^Podverse/Feed Parser"
@@ -697,6 +838,13 @@
   test:
     userAgents:
     - userAgent: z0-qiniu-imgstg-spider-1.0
+- app: Radioline Stream Monitoring
+  match:
+    regex: "^Radioline Stream Monitoring"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Radioline Stream Monitoring (tech@radioline.co)
 - app: RedCircle
   match:
     regex: RedCircle
@@ -704,6 +852,13 @@
   test:
     userAgents:
     - userAgent: RedCircle
+- app: Rephonic
+  match:
+    regex: "^Rephonic/\\d"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Rephonic/1.0
 - app: Ridder Bot
   match:
     regex: " RidderBot/"
@@ -784,6 +939,13 @@
   match:
     regex: "^SoundOn/[\\d.]+\\s+\\(bot"
   platform: bot
+- app: Speechmatics ASR
+  match:
+    regex: "^Speechmatics-API/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Speechmatics-API/2.0
 - app: Spotify cache service
   match:
     regex: "^Spotify/1\\.0$"
@@ -824,10 +986,24 @@
   test:
     userAgents:
     - userAgent: Tiny Tiny RSS/22.12-c30b24d09 (Unsupported) (https://tt-rss.org/)
+- app: Transistor
+  match:
+    regex: "^Transistor\\.fm/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Transistor.fm/1.0
 - app: Trendsmap Resolver
   match:
     regex: TrendsmapResolver/
   platform: bot
+- app: Triton Digital Podcast Sync
+  match:
+    regex: "^Triton Digital Podcast Sync$"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Triton Digital Podcast Sync
 - app: Twingly Bot
   match:
     regex: Twingly Recon;
@@ -851,6 +1027,13 @@
     userAgents:
     - userAgent: UCast/1.0 Podcast Sync (1 subscribers; feed-id=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8yMDg0OTQucnNzEAEBAD32-0242-42AC-8583-21E9BAD8C544;
         +http://www.ucastapp.com/)
+- app: UptimeRobot
+  match:
+    regex: UptimeRobot/\d
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Mozilla/5.0+(compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)
 - app: TelegramBot
   match:
     regex: "^TelegramBot "

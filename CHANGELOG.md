@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.6]
+
+- Update bot detection list, purpose: detect `agma/*` as bot
+
 ## [1.1.5]
 
 - Rename `Amazon Alexa` to `Alexa`
