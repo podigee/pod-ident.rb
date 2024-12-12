@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.7]
+
+- Update bot detection list
+
 ## [1.1.6]
 
 - Update bot detection list, purpose: detect `agma/*` as bot

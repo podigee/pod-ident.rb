@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pod_ident (1.1.6)
+    pod_ident (1.1.7)
 
 GEM
   remote: https://rubygems.org/
@@ -41,4 +41,4 @@ DEPENDENCIES
   rspec_junit_formatter
 
 BUNDLED WITH
-   2.4.14
+   2.5.23
