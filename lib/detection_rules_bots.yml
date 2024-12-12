@@ -701,6 +701,20 @@
   test:
     userAgents:
     - userAgent: Podcast%20Archiver/3000000003 CFNetwork/1406.0.4 Darwin/22.4.0
+- app: Podcast Archiver (janw)
+  match:
+    regex: "^podcast-archiver/v\\d"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: podcast-archiver/v1.7.1 (https://github.com/janw/podcast-archiver)
+- app: Podcastics
+  match:
+    regex: "^Podcastics$"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Podcastics
 - app: PodCloud
   match:
     regex: podCloud
@@ -747,6 +761,13 @@
   test:
     userAgents:
     - userAgent: Podio/1.0
+- app: Podmon Bot
+  match:
+    regex: "^Podmonbot/"
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Podmonbot/1.0
 - app: Podnews
   match:
     regex: PodnewsBot
@@ -972,6 +993,13 @@
     userAgents:
     - userAgent: SupportingCast/1.0
     - userAgent: SupportingCast
+- app: Taddy Podcast API
+  match:
+    regex: "^Taddy Podcast API "
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Taddy Podcast API (https://taddy.org/developers)
 - app: Timpi search crawler
   match:
     regex: Timpibot/
@@ -1004,6 +1032,13 @@
   test:
     userAgents:
     - userAgent: Triton Digital Podcast Sync
+- app: TurnitinBot
+  match:
+    regex: "^Turnitin \\("
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Turnitin (https://bit.ly/2UvnfoQ)
 - app: Twingly Bot
   match:
     regex: Twingly Recon;
