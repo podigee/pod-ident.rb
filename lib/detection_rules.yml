@@ -152,6 +152,18 @@
       - userAgent: Echo/1.0(APNG)
         platform: Amazon Echo
 
+- app: Campfire
+  match:
+    startsWith: Campfire
+  platform:
+    regex: '(Android|iOS)'
+  test:
+    userAgents:
+      - userAgent: Campfire/2.0.4 (Build 620) iOS/18.4.1
+        platform: iOS
+      - userAgent: Campfire/2.0.3 (Build 308) Android/14 (API 34)
+        platform: Android
+
 - app: Deezer
   match:
     startsWith: Deezer
