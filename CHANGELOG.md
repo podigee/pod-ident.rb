@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.8]
+
+- Detect `Campfire` app
+- Update bot detection list
+
 ## [1.1.7]
 
 - Update bot detection list
