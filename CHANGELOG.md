@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.9]
+
+- Detect `aiohttp` app
+
 ## [1.1.8]
 
 - Detect `Campfire` app

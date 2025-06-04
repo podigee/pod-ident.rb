@@ -21,3 +21,10 @@
   test:
     userAgents:
     - userAgent: Faraday for Podigee (like curl)
+- app: aiohttp
+  match:
+    regex: '\saiohttp/\d'
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Python/3.10 aiohttp/3.9.5
