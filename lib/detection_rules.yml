@@ -1086,13 +1086,28 @@
       - userAgent: Podimo/1.1 build 123/Android (Linux; U; Android 10; SM-G960F Build/QP1A.190711.020)
         platform: Android
 
-- app: ARD Audiothek
+- app: ARD Sounds
   match:
-    startsWith: ARD Audiothek
+    startsWith:
+      - ARD Sounds
+      - ARD%20Sounds
+      - ARD-Sounds
+      - ARD Audiothek
   platform:
-    regex: "(iOS|Android)"
+    regex: "(iOS|Android|Darwin)"
+    replacements:
+      - name: Darwin
+        replaceWith: iOS
   test:
     userAgents:
+      - userAgent: "ARD Sounds/4.0.0 (Google Play) Dalvik/2.1.0 (Linux; U; Android 16; 2410CRP4CG Build/BP2A.250605.031.A3)"
+        platform: Android
+      - userAgent: "ARD Sounds/4.0.0 (iOS) Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148"
+        platform: iOS
+      - userAgent: "ARD%20Sounds/4.0.0 CFNetwork/1494.0.7 Darwin/23.4.0"
+        platform: iOS
+      - userAgent: "ARD-Sounds/31"
+        platform: ~
       - userAgent: "ARD Audiothek Android-Auto 2.3.2 - Android Auto/2.3.2 (Linux;Android 11) ExoPlayerLib/2.14.1"
         platform: Android
       - userAgent: "ARD Audiothek Android Production 2.3.2/2.3.2 (Linux;Android 10) ExoPlayerLib/2.14.1"

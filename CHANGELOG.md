@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.10]
+
+- Detect `ARD Sounds` app (successor to `ARD Audiothek`)
+
 ## [1.1.9]
 
 - Detect `aiohttp` app
