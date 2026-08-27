@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.11]
+
+- Detect Podigee's own internal HTTP clients as bots
+
 ## [1.1.10]
 
 - Detect `ARD Sounds` app (successor to `ARD Audiothek`)

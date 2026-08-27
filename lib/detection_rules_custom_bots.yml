@@ -1,4 +1,13 @@
 ---
+- app: Podigee internal
+  match:
+    regex: "^Podigee "
+  platform: bot
+  test:
+    userAgents:
+    - userAgent: Podigee secure downloader
+    - userAgent: Podigee Content Hub (https://podigee.com)
+    - userAgent: Podigee example client/1.0
 - app: Apache HTTPClient
   match:
     regex: "^Apache\\-HttpClient"
